@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="primerBean" class="com.clase45.clase45.uno.Uno">
+        <property name="nombre">
+            <value>Charles Darwin</value>
+        </property>
+    </bean>
+    <bean id="segundoBean" class="com.clase45.clase45.dos.Dos">
+        <constructor-arg>
+            <value>Hola, soy un mensaje</value>
+        </constructor-arg>
+    </bean>
+    <bean id="tercerBean" class="com.clase45.clase45.tres.Persona">
+        <constructor-arg value="Lucas"></constructor-arg>
+        <constructor-arg value="98"></constructor-arg>
+        <constructor-arg ref="cuartoBean"></constructor-arg>
+    </bean>
+    <bean id="cuartoBean" class="com.clase45.clase45.tres.Telefono">
+        <property name="numero" value="5555"></property>
+    </bean>
+</beans>
